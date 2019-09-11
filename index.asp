@@ -11,7 +11,7 @@
   If dtmHour < 12 Then 
     strGreeting = "Good Morning!" 
   Else   
-    strGreeting = "Hello!" 
+    strGreeting = "Hello! and Good afternoon" 
   End If    
 %>  
 
