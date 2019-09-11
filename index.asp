@@ -9,15 +9,17 @@
   dtmHour = Hour(Now()) 
 
   If dtmHour < 12 Then 
-    strGreeting = "Good Morning!" 
-  ElseIf ((dtmHour > 16) and (dtmHour < 19)) Then
-    strGreeting = "Hello! and Good Afternoon, night is approaching" 
+    strGreeting = "Good Morning to you!" 
+  ElseIf ((dtmHour > 12) and (dtmHour < 16)) Then
+    strGreeting = "Hello and Good Afternoon!" 
+    ElseIf ((dtmHour > 17) and (dtmHour < 19)) Then
+    strGreeting = "Hello and Good Afternoon, just thought I would let you know that night is approaching and it will be dark soon"
   Else   
-    strGreeting = "Hello! and Good Evening" 
+    strGreeting = "Hello and Good Evening!" 
   End If    
 %>  
 <%= strGreeting %>
-<% Response.Write ("    Hello world the hour now is   ") %>
+<% Response.Write ("    Test hello world message, the hour on now is   ") %>
 <%= dtmHour %>
         </body>
 </html>
