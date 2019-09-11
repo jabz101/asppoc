@@ -10,8 +10,8 @@
 
   If dtmHour < 12 Then 
     strGreeting = "Good Morning!" 
-  ElseIf ((dtmHour > 12) and (dtmHour < 18)) Then
-    strGreeting = "Hello! and Good Afternoon" 
+  ElseIf ((dtmHour > 17) and (dtmHour < 19)) Then
+    strGreeting = "Hello! and Good Afternoon, have a good night" 
   Else   
     strGreeting = "Hello! and Good Evening" 
   End If    
