@@ -10,13 +10,13 @@
 
   If dtmHour < 12 Then 
     strGreeting = "Good Morning!" 
-  ElseIf ((dtmHour > 17) and (dtmHour < 19)) Then
-    strGreeting = "Hello! and Good Afternoon, have a good night" 
+  ElseIf ((dtmHour > 16) and (dtmHour < 19)) Then
+    strGreeting = "Hello! and Good Afternoon, night is approaching" 
   Else   
     strGreeting = "Hello! and Good Evening" 
   End If    
 %>  
 <%= strGreeting %>
-<% Response.Write ("Hello world") %>
+<% Response.Write ("    Hello world    ") %>
         </body>
 </html>
