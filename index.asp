@@ -12,6 +12,8 @@
     strGreeting = "Good Morning!" 
   Else   
     strGreeting = "Hello! and Good afternoon" 
+  ElseIF
+
   End If    
 %>  
 
