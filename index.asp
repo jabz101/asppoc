@@ -16,7 +16,7 @@
     strGreeting = "Hello! and Good Evening" 
   End If    
 %>  
-
+<%= dtmHour %>
 <%= strGreeting %> 
         </body>
 </html>
