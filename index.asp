@@ -16,7 +16,7 @@
     strGreeting = "Hello! and Good Evening" 
   End If    
 %>  
-<%= dtmHour %>
-<%= strGreeting %> 
+<%= strGreeting %>
+<% Response.Write ("Hello world") %>
         </body>
 </html>
