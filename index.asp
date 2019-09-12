@@ -4,7 +4,8 @@
         <body>
             <h1>VBScript Powered ASP page on Azure Web Apps </h1>
     <%  
-  Dim dtmHour 
+  Dim dtmHour
+  Dim dtmMin 
 
   dtmHour = Hour(Now())
   dtmMin = Min(Now()) 
