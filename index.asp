@@ -5,11 +5,9 @@
             <h1>VBScript Powered ASP page on Azure Web Apps </h1>
     <%  
   Dim dtmHour
-  Dim dtmMin 
-
+  
   dtmHour = Hour(Now())
-  dtmMin = Min(Now()) 
-
+  
   If dtmHour < 12 Then 
     strGreeting = "Good Morning to you!" 
   ElseIf ((dtmHour > 12) and (dtmHour < 16)) Then
@@ -21,8 +19,7 @@
   End If    
 %>  
 <%= strGreeting %>
-<% Response.Write ("    Test hello world message, the hour now is   ") %>
-<%= dtmHour %>
-<%= dtmMin %>
+<% Response.Write("    Test hello world message, the date & time now is: ") %>
+<% Response.Write(Now) %>
         </body>
 </html>
