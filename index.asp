@@ -6,7 +6,8 @@
     <%  
   Dim dtmHour 
 
-  dtmHour = Hour(Now()) 
+  dtmHour = Hour(Now())
+  dtmMin = Min(Now()) 
 
   If dtmHour < 12 Then 
     strGreeting = "Good Morning to you!" 
@@ -21,5 +22,6 @@
 <%= strGreeting %>
 <% Response.Write ("    Test hello world message, the hour now is   ") %>
 <%= dtmHour %>
+<%= dtmMin %>
         </body>
 </html>
