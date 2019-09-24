@@ -8,14 +8,14 @@
 <%
 	set conn=Server.CreateObject("ADODB.Connection")
 	conn.Provider = "SQL Server Native Client 10.0"
-	conn.Open("Server=tcp:jabsdb.database.windows.net,1433;Database=testdb;Uid=mj254@jabsdb;Pwd=M1920192!;Encrypt=yes;Connection Timeout=30;")
+	conn.Open("Server=tcp:jabsdb.database.windows.net,1433;Database=testdb;Uid=mj254@jabsdb;Pwd=;Encrypt=yes;Connection Timeout=30;")
 	set rs = Server.CreateObject("ADODB.recordset")
 	sql="SELECT * FROM SalesLT.Customer WHERE FirstName ='Keith'"
 	rs.Open sql, conn
 %>
 
 
-<h1><img src="img/AspClassic.png" alt=""/> Classic ASP website with Northwind DB</h1>
+<h1><img src="img/AspClassic.png" alt=""/> Classic ASP website with Northwind DB, SQL Query that searches for specfic person</h1>
 <table border="2" width="100%">
 <tr>
 <%for each x in rs.Fields
