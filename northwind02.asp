@@ -6,12 +6,19 @@
  </head>
  <body>
 <%
+
+set foo = createobject("WScript.Shell")
+myPath = foo.ExpandEnvironmentStrings("%DB%")
+
 	set conn=Server.CreateObject("ADODB.Connection")
 	conn.Provider = "SQL Server Native Client 10.0"
-	conn.Open("Server=tcp:databasename.database.windows.net,1433;Database=testdb;Uid=username@databasename;Pwd=password;Encrypt=yes;Connection Timeout=30;")
+	conn.Open(myPath)
 	set rs = Server.CreateObject("ADODB.recordset")
 	sql="SELECT * FROM SalesLT.Customer WHERE FirstName ='Keith'"
 	rs.Open sql, conn
+
+
+
 %>
 
 
