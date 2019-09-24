@@ -3,8 +3,8 @@
         <head> </head>
         <body>
             <h1>VBScript Powered ASP page on Azure Web Apps </h1>
-    <%  
-    
+
+<%  
 Dim dtmHour
   
   dtmHour = Hour(Now())
@@ -23,6 +23,15 @@ Dim dtmHour
 <%= strGreeting %>
 <% Response.Write("    Test hello world message, the date & time now is: ") %>
 <% Response.Write(Now) %>
+
+<%
+Dim strConn
+Set strConn = Server.CreateObject("ADODB.Connection")
+Connstr = Connstr & "DRIVER={ODBC Driver 13 for SQL Server};"
+Connstr = Connstr & "DATABASE=testdb;"
+Connstr = Connstr & "SERVER=tcp:jabsdb.database.windows.net,1433"
+SqlConn.Open Connstr, "mj254", "M1920192!" 
+%>
 
         </body>
 </html>
