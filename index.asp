@@ -23,6 +23,9 @@ Dim dtmHour
 <%= strGreeting %>
 <% Response.Write("    Test hello world message, the date & time now is: ") %>
 <% Response.Write(Now) %>
-
+<%
+set foo = createobject("WScript.Shell")
+myDB = foo.ExpandEnvironmentStrings("%DB%")
+%>
         </body>
 </html>
