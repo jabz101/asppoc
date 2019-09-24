@@ -1,0 +1,15 @@
+body {
+	font-family: "Segoe UI", "Helvetica Neue",Helvetica,Arial,sans-serif;
+    background-color: rgb(69,69,72); 
+    color: white;     
+}
+
+.rowodd {
+	background-color: #EBF1DE;
+	height: 30px;
+}
+
+.roweven {
+	background-color: #D8E4BC;
+	height: 30px;
+}
