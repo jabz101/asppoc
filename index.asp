@@ -26,6 +26,12 @@ Dim dtmHour
 <%
 set foo = createobject("WScript.Shell")
 myDB = foo.ExpandEnvironmentStrings("%DB%")
+
+Set objWSH =  CreateObject("WScript.Shell")
+'This actually returns all the User Variables, and you either loop through all, or simply print what you want
+Set objUserVariables = objWSH.Environment("%DB%") 
+MsgBox(objUserVariables("%DB%"))
+
 %>
         </body>
 </html>
