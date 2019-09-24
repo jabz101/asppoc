@@ -26,7 +26,7 @@ Dim dtmHour
 <%
 
 Set objWSH =  CreateObject("WScript.Shell")
-Set objUserVariables = objWSH.Environment("Process") 
+Set objUserVariables = objWSH.Environment("%DB%") 
 Response.Write(objUserVariables("CONNECTIONSTRING_DB"))
 
 
