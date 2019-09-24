@@ -8,7 +8,7 @@
 <%
 	set conn=Server.CreateObject("ADODB.Connection")
 	conn.Provider = "SQL Server Native Client 10.0"
-	conn.Open("Server=tcp:jabsdb.database.windows.net,1433;Database=testdb;Uid=mj254@jabsdb;Pwd=M1920192!;Encrypt=yes;Connection Timeout=30;")
+	conn.Open("Server=tcp:databaseserverame.database.windows.net,1433;Database=databasename;Uid=username@databasename;Pwd=password;Encrypt=yes;Connection Timeout=30;")
 	set rs = Server.CreateObject("ADODB.recordset")
 	sql="SELECT TOP (1000) * FROM SalesLT.Customer"
 	rs.Open sql, conn
