@@ -8,7 +8,7 @@
 <%
 
 Set objWSH =  CreateObject("WScript.Shell")
-Set objUserVariables = objWSH.Environment("Process") 
+Set objUserVariables = objWSH.Environment("%DB%") 
 Response.Write(objUserVariables("SQLAZURECONNSTR_DB"))
 
 	set conn=objUserVariables
