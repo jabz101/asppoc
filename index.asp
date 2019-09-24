@@ -24,13 +24,5 @@ Dim dtmHour
 <% Response.Write("    Test hello world message, the date & time now is: ") %>
 <% Response.Write(Now) %>
 
-
-Dim strConn
-Set strConn = Server.CreateObject("ADODB.Connection")
-Connstr = Connstr & "DRIVER={ODBC Driver 13 for SQL Server};"
-Connstr = Connstr & "DATABASE=testdb;"
-Connstr = Connstr & "SERVER=jabsdb.database.windows.net"
-SqlConn.Open Connstr, "mj254", "M1920192!" 
-
         </body>
 </html>
