@@ -10,7 +10,7 @@
 	conn.Provider = "SQL Server Native Client 10.0"
 	conn.Open("Server=tcp:jabsdb.database.windows.net,1433;Database=testdb;Uid=mj254@jabsdb;Pwd=M1920192!;Encrypt=yes;Connection Timeout=30;")
 	set rs = Server.CreateObject("ADODB.recordset")
-	sql="SELECT * FROM SalesLT.Customer"
+	sql="SELECT * FROM SalesLT.Customer WHERE FirstName ='Keith'"
 	rs.Open sql, conn
 %>
 
