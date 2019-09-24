@@ -24,7 +24,7 @@ Dim dtmHour
 <% Response.Write("    Test hello world message, the date & time now is: ") %>
 <% Response.Write(Now) %>
 
-Click this to test out <a href ="northwind01.asp"> ASP Classic SQL DB page</a> 
+Click this to test out <a href ="northwind01.asp"> my ASP Classic SQL DB page</a> 
 
         </body>
 </html>
