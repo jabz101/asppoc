@@ -24,13 +24,11 @@ Dim dtmHour
 <% Response.Write("    Test hello world message, the date & time now is: ") %>
 <% Response.Write(Now) %>
 <%
-set foo = createobject("WScript.Shell")
-myDB = foo.ExpandEnvironmentStrings("%DB%")
 
 Set objWSH =  CreateObject("WScript.Shell")
-'This actually returns all the User Variables, and you either loop through all, or simply print what you want
-Set objUserVariables = objWSH.Environment("%DB%") 
-MsgBox(objUserVariables("%DB%"))
+Set objUserVariables = objWSH.Environment("Process") 
+Response.Write(objUserVariables("CONNECTIONSTRING_DB"))
+
 
 %>
         </body>
