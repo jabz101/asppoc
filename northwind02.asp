@@ -7,12 +7,11 @@
  <body>
 <%
 
-set foo = createobject("WScript.Shell")
-myPath = foo.ExpandEnvironmentStrings("%DB%")
+Set objWSH =  CreateObject("WScript.Shell")
+Set objUserVariables = objWSH.Environment("Process") 
+Response.Write(objUserVariables("SQLAZURECONNSTR_DB"))
 
-	set conn=Server.CreateObject("ADODB.Connection")
-	conn.Provider = "SQL Server Native Client 10.0"
-	conn.Open(myPath)
+	set conn=objUserVariables
 	set rs = Server.CreateObject("ADODB.recordset")
 	sql="SELECT * FROM SalesLT.Customer WHERE FirstName ='Keith'"
 	rs.Open sql, conn
