@@ -29,7 +29,7 @@ Dim dtmHour
 <BR>Click this to test out <a href ="northwind02.asp"> my second ASP Classic SQL DB page</a> 
 <%
 Set objWSH =  CreateObject("WScript.Shell")
-Set objUserVariables = objWSH.Environment("%DB%") 
+Set objUserVariables = objWSH.Environment("DB") 
 Response.Write(objUserVariables("SQLAZURECONNSTR_DB"))
 %>
         </body>
